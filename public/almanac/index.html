@@ -17,17 +17,17 @@
   --border:rgba(201,168,76,0.2);--red:#e05555;--green:#55b87a;
   --blue:#5588e0;--purple:#9055e0;
 }
-html{font-size:16px;-webkit-text-size-adjust:100%}
-body{background:var(--bg-deep);color:var(--text-main);font-family:'Noto Sans TC',sans-serif;min-height:100vh;padding-bottom:70px}
+html{font-size:18px;-webkit-text-size-adjust:100%}
+body{background:var(--bg-deep);color:var(--text-main);font-family:'Noto Sans TC',sans-serif;min-height:100vh;padding-bottom:76px}
 .serif{font-family:'Noto Serif TC',serif}
 
 /* ── NAV ── */
 .top-bar{background:var(--bg-dark);border-bottom:1px solid var(--border);padding:12px 16px;display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:100}
-.top-bar .logo{font-family:'Noto Serif TC',serif;font-size:1.2rem;color:var(--gold);font-weight:700;letter-spacing:2px}
-.top-bar .today-short{margin-left:auto;font-size:.8rem;color:var(--text-sub)}
+.top-bar .logo{font-family:'Noto Serif TC',serif;font-size:1.35rem;color:var(--gold);font-weight:700;letter-spacing:2px}
+.top-bar .today-short{margin-left:auto;font-size:.92rem;color:var(--text-sub)}
 .bottom-nav{position:fixed;bottom:0;left:0;right:0;background:var(--bg-dark);border-top:1px solid var(--border);display:flex;z-index:100}
-.nav-btn{flex:1;padding:8px 4px 10px;display:flex;flex-direction:column;align-items:center;gap:3px;font-size:.65rem;color:var(--text-sub);cursor:pointer;border:none;background:none;transition:color .2s}
-.nav-btn i{font-size:1.2rem}
+.nav-btn{flex:1;padding:8px 4px 10px;display:flex;flex-direction:column;align-items:center;gap:4px;font-size:.78rem;color:var(--text-sub);cursor:pointer;border:none;background:none;transition:color .2s}
+.nav-btn i{font-size:1.4rem}
 .nav-btn.active{color:var(--gold)}
 .nav-btn.active i{text-shadow:0 0 8px var(--gold)}
 
@@ -37,37 +37,37 @@ body{background:var(--bg-deep);color:var(--text-main);font-family:'Noto Sans TC'
 
 /* ── CARDS ── */
 .card{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:14px}
-.card-title{font-family:'Noto Serif TC',serif;font-size:.85rem;color:var(--gold);letter-spacing:2px;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.card-title{font-family:'Noto Serif TC',serif;font-size:.95rem;color:var(--gold);letter-spacing:2px;margin-bottom:12px;display:flex;align-items:center;gap:8px}
 .card-title::before{content:'';display:inline-block;width:3px;height:14px;background:var(--gold);border-radius:2px}
 
 /* ── TODAY ── */
 .date-hero{text-align:center;padding:20px 0 10px}
-.date-greg{font-size:1.05rem;color:var(--text-sub);margin-bottom:6px}
-.date-lunar{font-family:'Noto Serif TC',serif;font-size:1.4rem;color:var(--gold-light);font-weight:700;line-height:1.4;letter-spacing:1px}
-.date-year-info{font-size:.82rem;color:var(--text-sub);margin-top:6px}
-.jiezhi-tag{display:inline-block;padding:2px 8px;border:1px solid var(--gold-dim);border-radius:10px;font-size:.75rem;color:var(--gold);margin-top:4px}
+.date-greg{font-size:1.1rem;color:var(--text-sub);margin-bottom:6px}
+.date-lunar{font-family:'Noto Serif TC',serif;font-size:1.7rem;color:var(--gold-light);font-weight:700;line-height:1.4;letter-spacing:1px}
+.date-year-info{font-size:.95rem;color:var(--text-sub);margin-top:6px}
+.jiezhi-tag{display:inline-block;padding:3px 10px;border:1px solid var(--gold-dim);border-radius:10px;font-size:.88rem;color:var(--gold);margin-top:6px}
 
 /* ── 四柱 ── */
 .pillar-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
 .pillar{background:var(--bg-card2);border:1px solid var(--border);border-radius:8px;padding:10px 6px;text-align:center}
-.pillar-label{font-size:.65rem;color:var(--text-muted);margin-bottom:6px}
-.pillar-gz{font-family:'Noto Serif TC',serif;font-size:1.3rem;color:var(--text-main);font-weight:600;line-height:1.2;letter-spacing:1px}
+.pillar-label{font-size:.78rem;color:var(--text-muted);margin-bottom:6px}
+.pillar-gz{font-family:'Noto Serif TC',serif;font-size:1.45rem;color:var(--text-main);font-weight:600;line-height:1.2;letter-spacing:1px}
 .pillar-gz span{display:block}
-.pillar-elem{font-size:.7rem;margin-top:4px}
+.pillar-elem{font-size:.82rem;margin-top:4px}
 .elem-木{color:#55b87a}.elem-火{color:#e07755}.elem-土{color:#c9a84c}.elem-金{color:#88ccdd}.elem-水{color:#5588e0}
 
 /* ── 宜忌 ── */
 .yiji-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .yiji-col{background:var(--bg-card2);border-radius:8px;padding:10px}
-.yiji-col h4{font-size:.78rem;font-weight:600;margin-bottom:8px;letter-spacing:1px}
+.yiji-col h4{font-size:.92rem;font-weight:600;margin-bottom:8px;letter-spacing:1px}
 .yiji-yi h4{color:var(--green)}.yiji-ji h4{color:var(--red)}
-.yiji-item{display:flex;align-items:center;gap:5px;font-size:.78rem;padding:3px 0;color:var(--text-sub)}
-.yiji-item i{font-size:.7rem}
+.yiji-item{display:flex;align-items:center;gap:6px;font-size:.92rem;padding:4px 0;color:var(--text-sub)}
+.yiji-item i{font-size:.8rem}
 .yiji-yi .yiji-item i{color:var(--green)}
 .yiji-ji .yiji-item i{color:var(--red)}
 
 /* ── 日神信息 ── */
-.info-row{display:flex;align-items:center;justify-content:space-between;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.05);font-size:.83rem}
+.info-row{display:flex;align-items:center;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.05);font-size:.95rem}
 .info-row:last-child{border-bottom:none}
 .info-label{color:var(--text-sub)}
 .info-value{color:var(--text-main);font-weight:500}
@@ -75,7 +75,7 @@ body{background:var(--bg-deep);color:var(--text-main);font-family:'Noto Sans TC'
 .neutral{color:var(--gold)}
 
 /* ── 建除 badge ── */
-.jz-badge{display:inline-block;padding:2px 10px;border-radius:10px;font-size:.8rem;font-weight:700;font-family:'Noto Serif TC',serif}
+.jz-badge{display:inline-block;padding:3px 12px;border-radius:10px;font-size:.9rem;font-weight:700;font-family:'Noto Serif TC',serif}
 .jz-0,.jz-5{background:rgba(201,168,76,.15);color:var(--gold);border:1px solid var(--gold-dim)}
 .jz-1,.jz-9,.jz-10{background:rgba(85,184,122,.15);color:var(--green);border:1px solid rgba(85,184,122,.3)}
 .jz-2,.jz-3,.jz-4{background:rgba(136,204,221,.15);color:var(--blue);border:1px solid rgba(136,204,221,.3)}
@@ -87,42 +87,42 @@ body{background:var(--bg-deep);color:var(--text-main);font-family:'Noto Sans TC'
 .shichen-list{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .shichen-item{background:var(--bg-card2);border:1px solid var(--border);border-radius:8px;padding:8px 10px;display:flex;align-items:center;gap:8px}
 .shichen-item.current{border-color:var(--gold);background:rgba(201,168,76,.08)}
-.shichen-gz{font-family:'Noto Serif TC',serif;font-size:1rem;font-weight:700;color:var(--text-main);width:30px;flex-shrink:0}
+.shichen-gz{font-family:'Noto Serif TC',serif;font-size:1.15rem;font-weight:700;color:var(--text-main);width:36px;flex-shrink:0}
 .shichen-info{flex:1}
-.shichen-time{font-size:.7rem;color:var(--text-muted)}
-.shichen-fortune{font-size:.72rem;font-weight:600}
+.shichen-time{font-size:.82rem;color:var(--text-muted)}
+.shichen-fortune{font-size:.88rem;font-weight:600}
 .fortune-好{color:var(--green)}.fortune-吉{color:var(--gold)}.fortune-平{color:var(--text-sub)}.fortune-凶{color:var(--red)}
 
 /* ── 月曆 ── */
 .cal-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
-.cal-title{font-family:'Noto Serif TC',serif;font-size:1.1rem;color:var(--gold)}
-.cal-nav{background:none;border:1px solid var(--border);color:var(--gold);width:32px;height:32px;border-radius:8px;cursor:pointer;font-size:.9rem}
+.cal-title{font-family:'Noto Serif TC',serif;font-size:1.25rem;color:var(--gold)}
+.cal-nav{background:none;border:1px solid var(--border);color:var(--gold);width:36px;height:36px;border-radius:8px;cursor:pointer;font-size:1rem}
 .cal-nav:hover{background:var(--bg-card2)}
 .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px}
-.cal-dow{text-align:center;font-size:.7rem;color:var(--text-muted);padding:4px 0}
+.cal-dow{text-align:center;font-size:.82rem;color:var(--text-muted);padding:6px 0}
 .cal-dow:first-child{color:#e06666}.cal-dow:last-child{color:#6688cc}
-.cal-day{background:var(--bg-card2);border-radius:6px;padding:4px 2px;min-height:52px;cursor:pointer;transition:background .15s;border:1px solid transparent;position:relative}
+.cal-day{background:var(--bg-card2);border-radius:6px;padding:4px 2px;min-height:62px;cursor:pointer;transition:background .15s;border:1px solid transparent;position:relative}
 .cal-day:hover{background:#1e2a40}
 .cal-day.today{border-color:var(--gold)}
 .cal-day.other-month{opacity:.3}
 .cal-day.selected{background:rgba(201,168,76,.15);border-color:var(--gold)}
-.cal-day .greg{font-size:.82rem;font-weight:500;text-align:center;color:var(--text-main)}
+.cal-day .greg{font-size:.92rem;font-weight:500;text-align:center;color:var(--text-main)}
 .cal-day.sunday .greg{color:#e08888}
 .cal-day.saturday .greg{color:#8899dd}
-.cal-day .lunar{font-size:.63rem;text-align:center;color:var(--text-sub);margin-top:1px}
-.cal-day .term{font-size:.6rem;text-align:center;color:var(--gold);font-weight:600}
-.cal-day .moon{font-size:.75rem;text-align:center;margin-top:1px}
+.cal-day .lunar{font-size:.72rem;text-align:center;color:var(--text-sub);margin-top:1px}
+.cal-day .term{font-size:.68rem;text-align:center;color:var(--gold);font-weight:600}
+.cal-day .moon{font-size:.82rem;text-align:center;margin-top:1px}
 .cal-day .yiji-dot{width:5px;height:5px;border-radius:50%;margin:2px auto 0}
 .dot-auspicious{background:var(--green)}.dot-inauspicious{background:var(--red)}.dot-neutral{background:var(--gold-dim)}
 
 .cal-detail{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:14px;margin-top:10px}
-.cal-detail-date{font-family:'Noto Serif TC',serif;font-size:1rem;color:var(--gold);margin-bottom:10px}
+.cal-detail-date{font-family:'Noto Serif TC',serif;font-size:1.1rem;color:var(--gold);margin-bottom:10px}
 
 /* ── 節氣 ── */
 .term-current{text-align:center;padding:16px;background:linear-gradient(135deg,rgba(201,168,76,.1),rgba(201,168,76,.03));border:1px solid var(--border);border-radius:12px;margin-bottom:14px}
-.term-current .tc-label{font-size:.8rem;color:var(--text-sub);margin-bottom:4px}
-.term-current .tc-name{font-family:'Noto Serif TC',serif;font-size:2rem;color:var(--gold);font-weight:700}
-.term-current .tc-time{font-size:.82rem;color:var(--text-sub);margin-top:6px}
+.term-current .tc-label{font-size:.95rem;color:var(--text-sub);margin-bottom:4px}
+.term-current .tc-name{font-family:'Noto Serif TC',serif;font-size:2.4rem;color:var(--gold);font-weight:700}
+.term-current .tc-time{font-size:.95rem;color:var(--text-sub);margin-top:6px}
 .term-current .tc-next{margin-top:12px;padding-top:12px;border-top:1px solid var(--border)}
 .term-list{display:flex;flex-direction:column;gap:6px}
 .term-item{display:flex;align-items:center;gap:10px;padding:8px 12px;background:var(--bg-card2);border-radius:8px;border:1px solid transparent}
@@ -133,11 +133,11 @@ body{background:var(--bg-deep);color:var(--text-main);font-family:'Noto Sans TC'
 .term-item.passed .term-dot{background:var(--text-muted)}
 .term-item.current-term .term-dot{background:var(--gold);box-shadow:0 0 6px var(--gold)}
 .term-item.upcoming .term-dot{background:var(--gold-dim)}
-.term-name{font-family:'Noto Serif TC',serif;font-size:.95rem;font-weight:600;width:36px;flex-shrink:0}
-.term-date-time{flex:1;font-size:.78rem;color:var(--text-sub)}
-.term-countdown{font-size:.72rem;color:var(--gold);text-align:right}
+.term-name{font-family:'Noto Serif TC',serif;font-size:1.05rem;font-weight:600;width:40px;flex-shrink:0}
+.term-date-time{flex:1;font-size:.9rem;color:var(--text-sub)}
+.term-countdown{font-size:.88rem;color:var(--gold);text-align:right}
 .term-season{display:flex;gap:6px;margin-bottom:10px;flex-wrap:wrap}
-.season-badge{padding:4px 12px;border-radius:20px;font-size:.75rem;font-weight:600;border:1px solid}
+.season-badge{padding:5px 14px;border-radius:20px;font-size:.88rem;font-weight:600;border:1px solid}
 .spring{color:#55cc88;border-color:rgba(85,204,136,.3);background:rgba(85,204,136,.08)}
 .summer{color:#e08844;border-color:rgba(224,136,68,.3);background:rgba(224,136,68,.08)}
 .autumn{color:#c9a84c;border-color:rgba(201,168,76,.3);background:rgba(201,168,76,.08)}
@@ -146,25 +146,25 @@ body{background:var(--bg-deep);color:var(--text-main);font-family:'Noto Sans TC'
 /* ── 擇日 ── */
 .zeri-form{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:14px}
 .form-row{margin-bottom:12px}
-.form-label{font-size:.8rem;color:var(--text-sub);margin-bottom:6px;display:block}
-.form-select,.form-input{width:100%;background:var(--bg-card2);border:1px solid var(--border);color:var(--text-main);padding:9px 12px;border-radius:8px;font-size:.88rem;font-family:'Noto Sans TC',sans-serif;appearance:none;-webkit-appearance:none}
+.form-label{font-size:.92rem;color:var(--text-sub);margin-bottom:8px;display:block}
+.form-select,.form-input{width:100%;background:var(--bg-card2);border:1px solid var(--border);color:var(--text-main);padding:11px 14px;border-radius:8px;font-size:1rem;font-family:'Noto Sans TC',sans-serif;appearance:none;-webkit-appearance:none}
 .form-select:focus,.form-input:focus{outline:none;border-color:var(--gold)}
-.btn-primary{width:100%;padding:12px;background:linear-gradient(135deg,var(--gold-dim),var(--gold));color:#090c13;border:none;border-radius:8px;font-size:.95rem;font-weight:700;font-family:'Noto Serif TC',serif;cursor:pointer;letter-spacing:2px;transition:opacity .2s}
+.btn-primary{width:100%;padding:14px;background:linear-gradient(135deg,var(--gold-dim),var(--gold));color:#090c13;border:none;border-radius:8px;font-size:1.05rem;font-weight:700;font-family:'Noto Serif TC',serif;cursor:pointer;letter-spacing:2px;transition:opacity .2s}
 .btn-primary:hover{opacity:.9}
 .zeri-result{background:var(--bg-card2);border-radius:8px;padding:10px 12px;margin-bottom:8px;border:1px solid var(--border)}
 .zeri-result.best{border-color:var(--gold);background:rgba(201,168,76,.06)}
 .zeri-result.good{border-color:rgba(85,184,122,.3)}
 .zeri-date{display:flex;align-items:center;gap:8px;margin-bottom:6px}
-.zeri-stars{color:var(--gold);font-size:.82rem}
-.zeri-greg{font-size:.95rem;font-weight:600}
-.zeri-lunar{font-size:.75rem;color:var(--text-sub)}
-.zeri-gz{font-family:'Noto Serif TC',serif;font-size:.82rem;color:var(--gold-light)}
-.zeri-yiji{font-size:.75rem;color:var(--text-sub);line-height:1.6}
-.zeri-score{float:right;font-size:.8rem;color:var(--green);font-weight:600}
-.zeri-empty{text-align:center;color:var(--text-muted);padding:30px;font-size:.88rem}
+.zeri-stars{color:var(--gold);font-size:.92rem}
+.zeri-greg{font-size:1.05rem;font-weight:600}
+.zeri-lunar{font-size:.88rem;color:var(--text-sub)}
+.zeri-gz{font-family:'Noto Serif TC',serif;font-size:.92rem;color:var(--gold-light)}
+.zeri-yiji{font-size:.88rem;color:var(--text-sub);line-height:1.7}
+.zeri-score{float:right;font-size:.92rem;color:var(--green);font-weight:600}
+.zeri-empty{text-align:center;color:var(--text-muted);padding:30px;font-size:1rem}
 
 /* ── 彭祖 ── */
-.pengzu{background:rgba(201,168,76,.05);border:1px solid var(--border);border-radius:8px;padding:10px 12px;font-size:.78rem;color:var(--text-sub);line-height:1.8}
+.pengzu{background:rgba(201,168,76,.05);border:1px solid var(--border);border-radius:8px;padding:12px 14px;font-size:.92rem;color:var(--text-sub);line-height:1.9}
 .pengzu strong{color:var(--gold)}
 
 /* ── Loader ── */
@@ -181,7 +181,7 @@ body{background:var(--bg-deep);color:var(--text-main);font-family:'Noto Sans TC'
 
 /* ── 響應式 ── */
 @media(min-width:480px){
-  .pillar-gz{font-size:1.5rem}
+  .pillar-gz{font-size:1.7rem}
   .shichen-list{grid-template-columns:repeat(4,1fr)}
 }
 @media(min-width:640px){
