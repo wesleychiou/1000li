@@ -200,6 +200,13 @@ body{background:var(--bg-deep);color:var(--text-main);font-family:'Noto Sans TC'
 <!-- ═══ TODAY ═══ -->
 <section class="section active" id="sec-today">
   <div class="date-hero">
+    <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:4px">
+      <button class="cal-nav" id="dayPrev" title="上一日"><i class="fas fa-chevron-left"></i></button>
+      <div style="min-width:80px;text-align:center">
+        <button id="dayTodayBtn" style="background:none;border:1px solid var(--gold-dim);color:var(--gold);padding:3px 10px;border-radius:10px;font-size:.78rem;cursor:pointer;font-family:'Noto Sans TC',sans-serif;display:none">回今日</button>
+      </div>
+      <button class="cal-nav" id="dayNext" title="下一日"><i class="fas fa-chevron-right"></i></button>
+    </div>
     <div class="date-greg" id="todayGreg"></div>
     <div class="date-lunar serif" id="todayLunar"></div>
     <div class="date-year-info" id="todayYearInfo"></div>
@@ -1086,12 +1093,36 @@ function showSection(name){
 // ════════════════════════════════════════════
 // INIT
 // ════════════════════════════════════════════
+let viewDate=new Date(); // currently viewed date in today section
+
+function updateDayNav(){
+  const today=new Date();
+  const isToday=viewDate.toDateString()===today.toDateString();
+  document.getElementById('dayTodayBtn').style.display=isToday?'none':'inline-block';
+}
+
+function changeViewDate(offset){
+  viewDate=new Date(viewDate);
+  viewDate.setDate(viewDate.getDate()+offset);
+  updateDayNav();
+  renderToday(viewDate);
+}
+
 document.addEventListener('DOMContentLoaded',()=>{
   const now=new Date();
 
   // Nav
   document.querySelectorAll('.nav-btn').forEach(b=>{
     b.addEventListener('click',()=>showSection(b.dataset.sec));
+  });
+
+  // Day prev/next
+  document.getElementById('dayPrev').addEventListener('click',()=>changeViewDate(-1));
+  document.getElementById('dayNext').addEventListener('click',()=>changeViewDate(1));
+  document.getElementById('dayTodayBtn').addEventListener('click',()=>{
+    viewDate=new Date();
+    updateDayNav();
+    renderToday(viewDate);
   });
 
   // Cal nav
@@ -1114,10 +1145,13 @@ document.addEventListener('DOMContentLoaded',()=>{
   // Render today
   renderToday(now);
 
-  // Refresh every minute
+  // Refresh every minute (only when viewing today)
   setInterval(()=>{
     const active=document.querySelector('.section.active');
-    if(active&&active.id==='sec-today')renderToday(new Date());
+    const today=new Date();
+    if(active&&active.id==='sec-today'&&viewDate.toDateString()===today.toDateString()){
+      renderToday(today);
+    }
   },60000);
 });
 </script>
