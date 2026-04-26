@@ -597,7 +597,7 @@ function monthGZ(date){
 function dayGZ(date){
   const jd=Math.floor(gregToJDE(date.getFullYear(),date.getMonth()+1,date.getDate())+0.5);
   const ref=Math.floor(gregToJDE(2000,1,1)+0.5); // JD of Jan 1, 2000
-  const idx=((jd-ref+15)%60+60)%60;
+  const idx=((jd-ref+54)%60+60)%60;
   return{stem:idx%10,branch:idx%12,idx,gz:STEMS[idx%10]+BRANCH[idx%12]};
 }
 
